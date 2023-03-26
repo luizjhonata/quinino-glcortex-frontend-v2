@@ -120,8 +120,8 @@ function MainPage() {
                     </select>
                 </div>
                 <div className='result'>
-                    <h2>O custo da chamada sem o plano é: R$ {costWithoutPlan}</h2>
-                    <h2>O custo da chamada com o plano é: R$ {costWithPlan}</h2>
+                    <h2>Custo da chamada sem o plano: R$ {costWithoutPlan}</h2>
+                    <h2>Custo da chamada com o plano: R$ {costWithPlan}</h2>
                 </div>
                 <div className='btn-container'>
                     <button className="btn-calc" onClick={handleCalc} >CALCULAR CUSTOS</button>
