@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BASE_URL } from '../../util/request';
 import './styles.css';
-import Select from 'react-select';
 
 
 function MainPage() {
