@@ -95,7 +95,7 @@ function MainPage() {
                     </select>
                 </div>
                 <div className='info-select'>
-                    <p>Tempo da chamada em minutos:</p>
+                    <p>Tempo da chamada(min):</p>
                     <input placeholder='Tempo'
                         type="number"
                         min="0"
