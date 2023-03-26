@@ -1,12 +1,12 @@
 .mainpage-container {
     box-shadow: 0px 5px 60px rgba(190, 188, 188, 0.25);
     border-radius: 10px;
-    height: 100%;
     max-height: 450px;
     background-color: rgb(255, 255, 255);
     max-width: 700px;
     padding: 15px;
     font-family: "Roboto", sans-serif;
+    min-width: 380px;
 }
 
 .title {
@@ -62,12 +62,14 @@
     background-color: #fff;
     border: 2px solid #000000;
     padding: 3.5px;
+    min-width: 80px;
 }
 
 input:hover {
     background-color: #e7e7e7;
     border-color: #0272e2;
     outline: none;
+    min-width: 80px;
 }
 
 .calc p {
@@ -104,7 +106,7 @@ select:hover {
 }
 
 .info-select p {
-    width: 300px;
+    min-width: 200px;
 }
 
 h2 {
