@@ -76,7 +76,6 @@ input:hover {
 
 select {
     align-items: flex-end;
-    appearance: none;
     background-color: #fff;
     border: 2px solid #000000;
     border-radius: 5px;
@@ -150,11 +149,4 @@ h2 {
 .btn-calc:active {
     box-shadow: 0 0 0 0 #11467c, inset 1px 1px 0 2px #11467c;
     transform: translate(2px, 2px);
-}
-
-/* REMOÇÃO SETAS DO INPUT */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
