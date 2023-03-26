@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BASE_URL } from '../../util/request';
@@ -18,13 +18,28 @@ function MainPage() {
     const [costWithoutPlan, setCostWithoutPlan] = useState();
 
     const handleCalc = async () => {
+        if (origin == "" || destiny == "" || 
+            plan == "" || time == "") {
+            toast.error("Insira todos os dados",
+                {
+                    position: "top-center",
+                    autoClose: 2500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+        } else {
         try {
-            const response = await axios.get(`${BASE_URL}/costcalls?origin=${origin}&destiny=${destiny}&time=${time}&planId=${plan}`)
-                .then(response => {
-                    const { costWithPlan, costWithoutPlan } = response.data;
-                    setCostWithPlan(costWithPlan.toFixed(2));
-                    setCostWithoutPlan(costWithoutPlan.toFixed(2));
-                })
+                const response = await axios.get(`${BASE_URL}/costcalls?origin=${origin}&destiny=${destiny}&time=${time}&planId=${plan}`)
+                    .then(response => {
+                        const { costWithPlan, costWithoutPlan } = response.data;
+                        setCostWithPlan(costWithPlan.toFixed(2));
+                        setCostWithoutPlan(costWithoutPlan.toFixed(2));
+                    })
+            
         } catch (error: any) {
             const message = error.response.data.message;
             toast.error(message,
@@ -39,13 +54,8 @@ function MainPage() {
                     theme: "dark",
                 });
             console.log(message);
-        };
+        };}
     }
-
-    useEffect(() => {
-
-    }, []);
-
     return (
         <div className='mainpage-container'>
             <div className='title'>
@@ -78,7 +88,7 @@ function MainPage() {
                             setDestiny(e.target.value)}
                         id="selectMenu"
                     >
-                        <option value="opcao1">Destino</option>
+                        <option value="">Destino</option>
                         <option value="011">011</option>
                         <option value="016">016</option>
                         <option value="017">017</option>
@@ -104,7 +114,7 @@ function MainPage() {
                             setPlan(e.target.value)}
                         id="selectMenu"
                     >
-                        <option value="opcao1">Plano</option>
+                        <option value="">Plano</option>
                         <option value="1">Fale Mais 30</option>
                         <option value="2">Fale Mais 60</option>
                         <option value="3">Fale Mais 120</option>
