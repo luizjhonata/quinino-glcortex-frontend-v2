@@ -1,0 +1,160 @@
+.mainpage-container {
+    box-shadow: 0px 5px 60px rgba(190, 188, 188, 0.25);
+    border-radius: 10px;
+    height: 100%;
+    max-height: 450px;
+    background-color: rgb(255, 255, 255);
+    max-width: 700px;
+    padding: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#selectMenu {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.calc {
+    padding: 10px;
+    max-width: 800px;
+    font-size: 14px;
+}
+
+.calc input {
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #000000;
+    padding: 3.5px;
+}
+
+input:hover {
+    background-color: #e7e7e7;
+    border-color: #0272e2;
+    outline: none;
+}
+
+.calc p {
+    margin-right: 10px;
+}
+
+select {
+    align-items: flex-end;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 13px;
+    padding: 3px;
+    width: 40%;
+    max-width: 400px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #e7e7e7;
+    border-color: #0272e2;
+    outline: none;
+}
+
+.info-select {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    justify-items: right;
+}
+
+.info-select p {
+    width: 300px;
+}
+
+h2 {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    text-align: center;
+    color: #000000;
+}
+
+
+.btn-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn-container button {
+    width: 170px;
+    height: 35px;
+    background: #0272e2;
+    border-radius: 5px;
+    border: transparent;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 2px #11467c;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn-calc:active {
+    box-shadow: 0 0 0 0 #11467c, inset 1px 1px 0 2px #11467c;
+    transform: translate(2px, 2px);
+}
+
+/* REMOÇÃO SETAS DO INPUT */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
