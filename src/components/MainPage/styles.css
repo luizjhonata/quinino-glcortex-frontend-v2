@@ -51,9 +51,11 @@
     padding: 10px;
     max-width: 800px;
     font-size: 14px;
+    margin-right: 3px;
 }
 
 .calc input {
+    align-items: end;
     text-align: center;
     width: 40%;
     padding: 5px;
@@ -61,8 +63,9 @@
     border-radius: 5px;
     background-color: #fff;
     border: 2px solid #000000;
-    padding: 3.5px;
+    padding: 4.5px;
     min-width: 80px;
+    
 }
 
 input:hover {
@@ -89,6 +92,7 @@ select {
     box-sizing: border-box;
     transition: all 0.3s ease;
     cursor: pointer;
+    margin-left: 3px;
 }
 
 select:hover {
@@ -107,6 +111,10 @@ select:hover {
 
 .info-select p {
     min-width: 200px;
+}
+
+.info-select {
+    width: 100%;
 }
 
 h2 {
