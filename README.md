@@ -2,6 +2,8 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/luizjhonata/quinino-glcortex-frontend/blob/main/LICENCE)
 
+Link to see all project working https://quinino.netlify.app/ 
+
 ## About the project
 
 This is a frontend project was developed for Q.UININO TELEFONIA clients be able to calculate the cost off they calls.
