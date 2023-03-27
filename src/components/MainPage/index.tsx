@@ -118,7 +118,7 @@ function MainPage() {
                     >
                         <option value="">Plano</option>
                         {planList.map(plan =>(
-                        <option key={plan.id } value="1">{plan.name}</option>
+                        <option key={plan.id } value={plan.id}>{plan.name}</option>
                         ))}
                     </select>
                 </div>
