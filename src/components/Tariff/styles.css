@@ -1,0 +1,75 @@
+.tariff-container {
+    box-shadow: 0px 5px 60px rgba(190, 188, 188, 0.25);
+    border-radius: 10px;
+    max-height: 450px;
+    background-color: rgb(255, 255, 255);
+    max-width: 700px;
+    padding: 15px;
+    font-family: "Roboto", sans-serif;
+    min-width: 350px;
+    border: 1px solid;
+}
+
+.taiff-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.taiff-table thead {
+    height: 55px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.taiff-table tbody {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+}
+
+.taiff-table tbody tr {
+    height: 35px;
+}
+
+.taiff-table tbody tr:hover>td {
+    background-color: #e9e9e9;
+}
+
+.taiff-table tbody tr:nth-child(odd) {
+    background-color: #b4b4b4;
+}
+
+img {
+    width: 10px;
+    cursor: pointer;
+}
+
+.title-tariff h1{
+    font-size: 26px;
+}
+
+.nova-tarifa {
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.nova-tarifa {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+    border:rgb(112, 112, 112);
+    box-shadow: 1px 1px 0 1px #c0c1c2;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.nova-tarifa:active {
+    box-shadow: 0 0 0 0 rgb(112, 112, 112), inset 1px 1px 0 2px rgb(112, 112, 112);
+    transform: translate(2px, 2px);
+}

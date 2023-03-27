@@ -1,8 +1,10 @@
 import axios from 'axios';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Plan } from '../../model/plan';
 import { BASE_URL } from '../../util/request';
+import Header from '../Header';
 import './styles.css';
 
 
@@ -10,6 +12,7 @@ function MainPage() {
 
     const [origin, setOrigin] = useState("");
     const [destiny, setDestiny] = useState("");
+    const [planList, setPlanList] = useState<Plan[]>([]);
     const [plan, setPlan] = useState("");
     const [time, setTime] = useState("");
 
@@ -55,8 +58,19 @@ function MainPage() {
             console.log(message);
         };}
     }
+
+    useEffect (() => {
+
+        const plansLoad = planList;
+        axios.get(`${BASE_URL}/plans`)
+        .then(respose => {
+            setPlanList(respose.data)
+        })
+
+    }, []);
     return (
         <div className='mainpage-container'>
+            <Header/>
             <div className='title'>
                 <h1>
                     Calcule o custo de suas chamadas
@@ -65,34 +79,23 @@ function MainPage() {
             <div className='calc'>
                 <div className='info-select'  >
                     <p>Selecione DDD de origem: </p>
-                    <select
-                        value={origin}
-                        onChange={(e) =>
-                            setOrigin(e.target.value)}
-                        id="selectMenu"
+                    <input placeholder='DDD'
+                    type="text"
+                    value={origin}
+                    onChange={(e) =>
+                        setOrigin(e.target.value)}
                     >
-                        <option value="">Origem</option>
-                        <option value="011">011</option>
-                        <option value="016">016</option>
-                        <option value="017">017</option>
-                        <option value="018">018</option>
-                    </select>
+                    </input>
                 </div>
                 <div className='info-select'>
                     <p>Selecione DDD de destino: </p>
-
-                    <select
-                        value={destiny}
-                        onChange={(e) =>
-                            setDestiny(e.target.value)}
-                        id="selectMenu"
+                    <input placeholder='DDD'
+                    type="text"
+                    value={destiny}
+                    onChange={(e) =>
+                        setDestiny(e.target.value)}
                     >
-                        <option value="">Destino</option>
-                        <option value="011">011</option>
-                        <option value="016">016</option>
-                        <option value="017">017</option>
-                        <option value="018">018</option>
-                    </select>
+                    </input>
                 </div>
                 <div className='info-select'>
                     <p>Tempo da chamada(min):</p>
@@ -114,9 +117,9 @@ function MainPage() {
                         id="selectMenu"
                     >
                         <option value="">Plano</option>
-                        <option value="1">Fale Mais 30</option>
-                        <option value="2">Fale Mais 60</option>
-                        <option value="3">Fale Mais 120</option>
+                        {planList.map(plan =>(
+                        <option key={plan.id } value="1">{plan.name}</option>
+                        ))}
                     </select>
                 </div>
                 <div className='result'>

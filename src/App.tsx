@@ -1,15 +1,13 @@
 import { ToastContainer } from 'react-toastify'
 import './App.css'
-import Header from './components/Header'
-import MainPage from './components/MainPage'
+import AppRoutes from './AppRoutes'
 
 function App() {
 
   return (
     <div className="App">
       <ToastContainer />
-      <Header />
-      <MainPage />
+      <AppRoutes/>
     </div>
   )
 }

@@ -1,0 +1,82 @@
+.container-close-button {
+    margin-bottom: 15px;
+}
+
+.close-button {
+    top: 5px;
+    right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.container-modal {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    color: #000000;
+}
+
+.edit-content {
+    width: 100%;
+}
+
+.container-modal h2, input, .save-button {
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-modal input {
+    
+
+    margin-left: 5px;
+    width: 100%;
+    border-color: rgb(233, 233, 233);
+    background-color: rgb(230, 227, 227);
+    padding: 8px;
+    height: 30px;
+}
+
+.field-modal {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.field-modal h2 {
+    margin: 0;
+}
+
+.container-save-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.save-button {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+    border:rgb(112, 112, 112);
+    box-shadow: 2px 2px 0 2px #c0c1c2;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.save-button:active {
+    box-shadow: 0 0 0 0 rgb(112, 112, 112), inset 1px 1px 0 2px rgb(112, 112, 112);
+    transform: translate(2px, 2px);
+}
+
+
+.admin-input {
+    display: flex;
+    justify-content: start;
+
+}
